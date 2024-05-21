@@ -13,7 +13,7 @@ blogSchema.pre("save",async function(next){
     self.set({"id": count + 1})
     next()
 })
-const BlogModel = models.Blog || model("Blog",productSchema)
+const BlogModel = models.Blog || model("Blog",blogSchema)
 module.exports = {
     BlogModel
 }

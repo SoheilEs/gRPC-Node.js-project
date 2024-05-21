@@ -17,7 +17,7 @@ function main(){
         updateBlog
     })
     
-    server.bindAsync("0.0.0.0:4000",grpc.ServerCredentials.createInsecure(),(err, port)=>{
+    server.bindAsync("0.0.0.0:4002",grpc.ServerCredentials.createInsecure(),(err, port)=>{
         if(err) return console.log(err.message);
         console.log(`gRPC Running on 0.0.0.0:${port}`);
     })

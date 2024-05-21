@@ -21,7 +21,7 @@ async function getProduct(call, callback) {
   try {
     const { id } = call.request;
     const result = await ProductModel.findOne({ id });
-    if (!result) throw new Error("Product dosent exist");
+    if (!result) throw new Error("Product dosent exists");
     callback(null, result);
   } catch (error) {
     callback(error, null);
